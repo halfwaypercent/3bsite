@@ -108,6 +108,7 @@ header.cabecalho {
   justify-content: space-between;
   align-items: center;
   margin-top: -665px;
+  margin-left: -20px;
 }
 
 header .logo {
