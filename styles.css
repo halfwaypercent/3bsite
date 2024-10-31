@@ -65,14 +65,21 @@ main {
 
 .site-list {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 @media(min-width: 768px) {
   .site-list {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr); /* 3 colunas em telas maiores */
   }
+}
+
+/* Centraliza o último item da grade */
+.site-list > .site-item:nth-last-child(1) {
+  grid-column: 2 / span 1;
 }
 
 .site-item {
@@ -105,6 +112,34 @@ main {
 }
 
 /* Estilização da logo */
+.logoB {
+  max-width: 500px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.logoH {
+  max-width: 200px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.logoF {
+  max-width: 300px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.logoS {
+  max-width: 200px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
 .logo {
   max-width: 100px;
   margin-bottom: 15px;
